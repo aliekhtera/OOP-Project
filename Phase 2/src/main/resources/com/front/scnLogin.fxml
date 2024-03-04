@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.front.ScnLogin">
+   <children>
+      <Separator layoutX="293.0" orientation="VERTICAL" prefHeight="458.0" prefWidth="14.0" />
+      <Pane layoutY="4.0" prefHeight="450.0" prefWidth="300.0" style="-fx-background-color: rgba(192,192,192,1);">
+         <children>
+            <TextField fx:id="txtLun" layoutX="40.0" layoutY="75.0" onKeyTyped="#txtLunChecker" prefHeight="33.0" prefWidth="208.0" promptText="Enter User Name...">
+               <font>
+                  <Font name="A Nahar-Medium" size="15.0" />
+               </font></TextField>
+            <Label alignment="CENTER" layoutX="61.0" layoutY="14.0" prefHeight="44.0" prefWidth="166.0" text="Login">
+               <font>
+                  <Font name="A Nahar-Bold" size="20.0" />
+               </font></Label>
+            <Button layoutX="72.0" layoutY="327.0" mnemonicParsing="false" onAction="#recoverPassWord" prefHeight="33.0" prefWidth="143.0" text="Recovery Password">
+               <font>
+                  <Font name="A Nahar-Medium" size="16.0" />
+               </font></Button>
+            <PasswordField fx:id="txtLp" layoutX="40.0" layoutY="121.0" onKeyTyped="#txtLpChecker" prefHeight="33.0" prefWidth="208.0" promptText="Enter Password">
+               <font>
+                  <Font name="A Nahar-Medium" size="15.0" />
+               </font></PasswordField>
+            <Button layoutX="96.0" layoutY="401.0" mnemonicParsing="false" onAction="#login" prefHeight="33.0" prefWidth="89.0" text="Login">
+               <font>
+                  <Font name="A Nahar-Bold" size="15.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" layoutY="4.0" prefHeight="450.0" prefWidth="300.0" style="-fx-background-color: rgba(192,192,192,1);">
+         <children>
+            <TextField fx:id="txtSun" layoutX="37.0" layoutY="73.0" onKeyTyped="#txtSunChecker" prefHeight="33.0" prefWidth="208.0" promptText="Enter User Name...">
+               <font>
+                  <Font name="A Nahar-Medium" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="txtSSA" layoutX="36.0" layoutY="293.0" onKeyTyped="#txtSSAChecker" prefHeight="33.0" prefWidth="208.0" promptText=" Enter Answer...">
+               <font>
+                  <Font name="A Nahar-Medium" size="15.0" />
+               </font></TextField>
+            <ChoiceBox fx:id="cmbSSQ" layoutX="37.0" layoutY="254.0" prefHeight="33.0" prefWidth="208.0" />
+            <TextField fx:id="txtSFirst" layoutX="37.0" layoutY="159.0" onKeyTyped="#txtSFirstChecker" prefHeight="33.0" prefWidth="208.0" promptText=" Enter First Name...">
+               <font>
+                  <Font name="A Nahar-Medium" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="txtSLast" layoutX="37.0" layoutY="202.0" onKeyTyped="#txtSLastChecker" prefHeight="33.0" prefWidth="208.0" promptText=" Enter Last Name...">
+               <font>
+                  <Font name="A Nahar-Medium" size="15.0" />
+               </font></TextField>
+            <ChoiceBox fx:id="cmbSut" layoutX="36.0" layoutY="350.0" prefHeight="33.0" prefWidth="208.0" />
+            <Button layoutX="97.0" layoutY="403.0" mnemonicParsing="false" onAction="#signUp" prefHeight="33.0" prefWidth="89.0" text="SignUp">
+               <font>
+                  <Font name="A Nahar-Bold" size="15.0" />
+               </font></Button>
+            <PasswordField fx:id="txtSp" layoutX="37.0" layoutY="117.0" onKeyTyped="#txtSpChecker" prefHeight="33.0" prefWidth="208.0" promptText="Enter Password">
+               <font>
+                  <Font name="A Nahar-Medium" size="15.0" />
+               </font></PasswordField>
+            <Label alignment="CENTER" layoutX="57.0" layoutY="14.0" prefHeight="44.0" prefWidth="166.0" text="SignUp">
+               <font>
+                  <Font name="A Nahar-Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

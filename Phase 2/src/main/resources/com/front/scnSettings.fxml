@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="660.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.front.ScnSettings">
+   <children>
+      <Accordion prefHeight="660.0" prefWidth="300.0" style="-fx-background-color: rg;">
+        <panes>
+          <TitledPane animated="false" text="Account Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: rgba(211,211,211,1);">
+                     <children>
+                        <ImageView fx:id="imgProfile" fitHeight="150.0" fitWidth="150.0" layoutX="74.0" layoutY="14.0" onMouseClicked="#changeProfileImage" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ImageView>
+                        <TextField fx:id="txtUserName" disable="true" editable="false" layoutX="45.0" layoutY="175.0" prefHeight="33.0" prefWidth="208.0" promptText="User Name">
+                           <font>
+                              <Font name="A Nahar-Medium" size="16.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtAnswer" layoutX="45.0" layoutY="425.0" onKeyTyped="#txtSSAChecker" prefHeight="33.0" prefWidth="208.0" promptText="Answer">
+                           <font>
+                              <Font name="A Nahar-Medium" size="16.0" />
+                           </font></TextField>
+                        <ChoiceBox fx:id="cmbSecurityQuestion" layoutX="45.0" layoutY="384.0" prefHeight="33.0" prefWidth="208.0" />
+                        <TextField fx:id="txtFirstName" layoutX="45.0" layoutY="276.0" onKeyTyped="#txtSFirstChecker" prefHeight="33.0" prefWidth="208.0" promptText="First Name">
+                           <font>
+                              <Font name="A Nahar-Medium" size="16.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtLastName" layoutX="45.0" layoutY="315.0" onKeyTyped="#txtSLastChecker" prefHeight="33.0" prefWidth="208.0" promptText="Last Name">
+                           <font>
+                              <Font name="A Nahar-Medium" size="16.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtUserType" disable="true" editable="false" layoutX="45.0" layoutY="473.0" prefHeight="33.0" prefWidth="208.0" />
+                        <Button layoutX="92.0" layoutY="525.0" mnemonicParsing="false" onAction="#userEdit" prefHeight="45.0" prefWidth="114.0" text="Save">
+                           <font>
+                              <Font name="A Nahar-Medium" size="17.0" />
+                           </font></Button>
+                        <PasswordField fx:id="txtPassword" layoutX="46.0" layoutY="214.0" onKeyTyped="#txtPasswordChecker" prefHeight="34.0" prefWidth="207.0" promptText="Password">
+                           <font>
+                              <Font name="A Nahar-Medium" size="16.0" />
+                           </font></PasswordField>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font name="A Nahar-Medium" size="18.0" />
+               </font>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

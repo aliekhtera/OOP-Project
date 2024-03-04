@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="550.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.front.ApnPost">
+   <children>
+      <ImageView fx:id="imgPic" fitHeight="252.0" fitWidth="255.0" layoutX="128.0" layoutY="76.0" pickOnBounds="true" />
+      <Label fx:id="lblSender" layoutX="22.0" layoutY="335.0" prefHeight="26.0" prefWidth="184.0">
+         <font>
+            <Font name="Calibri Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblText" alignment="TOP_LEFT" layoutX="44.0" layoutY="376.0" prefHeight="25.0" prefWidth="466.0" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="219.0" layoutY="331.0" onMouseClicked="#newComment" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@icnReply.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgLike" fitHeight="35.0" fitWidth="35.0" layoutX="269.0" layoutY="332.0" onMouseClicked="#like" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="319.0" layoutY="332.0" onMouseClicked="#comments" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icnRepliedMessage.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="369.0" layoutY="332.0" onMouseClicked="#showLikes" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icnLikes.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgViews" fitHeight="35.0" fitWidth="35.0" layoutX="410.0" layoutY="331.0" onMouseClicked="#views" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgDelete" fitHeight="35.0" fitWidth="35.0" layoutX="469.0" layoutY="332.0" onMouseClicked="#delete" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icnDelete.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lblTime" layoutX="14.0" layoutY="41.0" prefHeight="18.0" prefWidth="222.0">
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

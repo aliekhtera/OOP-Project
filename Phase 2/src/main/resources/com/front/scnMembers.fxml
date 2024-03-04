@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="534.0" prefWidth="403.0" style="-fx-background-color: rgba(169,169,169,1);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.front.ScnMembers">
+    <children>
+        <ListView fx:id="listView" layoutX="38.0" layoutY="80.0" prefHeight="421.0" prefWidth="326.0" style="-fx-background-color: rgba(220,220,220,1);" />
+        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="23.0" prefHeight="43.0" prefWidth="326.0" text="Members">
+         <font>
+            <Font name="A Nahar-Bold" size="27.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

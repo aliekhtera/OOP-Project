@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.front.ScnNewMessage">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <Pane prefHeight="306.0" prefWidth="555.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="306.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#removeFile" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../../images/crossIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </center>
+         <bottom>
+            <Pane prefHeight="94.0" prefWidth="600.0" style="-fx-background-color: rgba(220,220,220,1);" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="txtText" layoutY="1.0" prefHeight="94.0" prefWidth="570.0" style="-fx-background-color: rgba(220,220,220,1);" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="570.0" onMouseClicked="#done" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/sendIcon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="570.0" layoutY="32.0" onMouseClicked="#newImage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/imageButtonIcom.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <ImageView fx:id="imgFile" fitHeight="30.0" fitWidth="30.0" layoutX="570.0" layoutY="64.0" onMouseClicked="#newFile" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/newFileIcon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

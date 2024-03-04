@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: rgba(211, 211,211,1);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.front.ScnPassRecovery">
+   <children>
+      <Button fx:id="btnOK" layoutX="226.0" layoutY="246.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="68.0" text="Search">
+         <font>
+            <Font name="A Nahar-Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="closeStage" layoutX="91.0" layoutY="246.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="68.0" text="close">
+         <font>
+            <Font name="A Nahar-Bold" size="15.0" />
+         </font></Button>
+      <Label fx:id="lblQ" layoutX="59.0" layoutY="89.0" prefHeight="31.0" prefWidth="261.0" />
+      <TextField fx:id="txtA" layoutX="69.0" layoutY="120.0" onInputMethodTextChanged="#txtAChecker" prefHeight="31.0" prefWidth="261.0" promptText="Please Enter Answer...">
+         <font>
+            <Font name="A Nahar-Medium" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtUn" layoutX="69.0" layoutY="64.0" onInputMethodTextChanged="#txtUnChecker" prefHeight="31.0" prefWidth="261.0" promptText="Please Enter User Name...">
+         <font>
+            <Font name="A Nahar-Medium" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtP" layoutX="69.0" layoutY="177.0" onInputMethodTextChanged="#txtPChecker" prefHeight="31.0" prefWidth="261.0" promptText="Please Enter New Password...">
+         <font>
+            <Font name="A Nahar-Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="134.0" layoutY="20.0" prefHeight="31.0" prefWidth="130.0" text="Recovery Password">
+         <font>
+            <Font name="A Nahar-Medium" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

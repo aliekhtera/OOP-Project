@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.front.ScnMain">
+   <children>
+      <BorderPane prefHeight="691.0" prefWidth="1229.0">
+         <left>
+            <BorderPane prefHeight="691.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+               <left>
+                  <Pane prefHeight="691.0" prefWidth="59.0" style="-fx-background-color: rgba(80,80,80,1);" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="52.0" fitWidth="46.0" layoutX="7.0" layoutY="9.0" onMouseClicked="#openSettingScene" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/settingsIcon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ListView fx:id="lstMessengerGroups" fixedCellSize="100.0" layoutY="80.0" onMouseClicked="#listsRefresh" prefHeight="305.0" prefWidth="64.0" style="-fx-background-color: rgba(80,80,80,1);">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ListView>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="7.0" layoutY="113.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/pvIcon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="49.0" layoutX="6.0" layoutY="213.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/groupIcon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="59.0" fitWidth="59.0" layoutY="300.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/pageIcon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="search" fitHeight="49.0" fitWidth="49.0" layoutX="5.0" layoutY="385.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/searchIcon.png" />
+                           </image></ImageView>
+                        <ImageView fitHeight="80.0" fitWidth="86.0" layoutX="-13.0" layoutY="455.0" onMouseClicked="#addNewGroup" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/AddGroupIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </left>
+               <center>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <Pane fx:id="cpnMessengersList" prefHeight="678.0" prefWidth="265.0">
+                           <children>
+                              <ListView fx:id="lstUsers" fixedCellSize="100.0" onMouseClicked="#messageFiller" prefHeight="678.0" prefWidth="265.0" style="-fx-border-color: rgba(200,200,200,1);" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="691.0" fitWidth="895.0" pickOnBounds="true" />
+                        <ScrollPane prefHeight="608.0" prefWidth="896.0" style="-fx-background-color: rgba(0,0,0,0);">
+                           <content>
+                              <VBox fx:id="vbxMessages" prefHeight="603.0" prefWidth="886.0" style="-fx-background-color: rgba(220,220,220,1);" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+               </center>
+               <top>
+                  <Pane prefHeight="81.0" prefWidth="894.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="imgTitle" fitHeight="70.0" fitWidth="70.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="lblTitle" layoutX="113.0" layoutY="6.0" prefHeight="39.0" prefWidth="300.0">
+                           <font>
+                              <Font name="Calibri Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="cpnPVTitle" layoutX="441.0" layoutY="9.0" prefHeight="67.0" prefWidth="435.0" visible="false">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#sendNewMessagePV" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../images/icnNewMessage.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#blockPV" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../images/icnBan.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                        <Pane fx:id="cpnGroupTitle" layoutX="441.0" layoutY="9.0" prefHeight="67.0" prefWidth="435.0" visible="false">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#sendNewMessageGroup" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../images/icnNewMessage.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#groupSettings" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../images/icnSettings.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#ban" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../images/icnBan.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#remove" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../images/icnRemove.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                        <Pane fx:id="cpnPageTitle" layoutX="441.0" layoutY="9.0" prefHeight="67.0" prefWidth="435.0" visible="false">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#pageShowFollowers" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/follwersIcn.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#pageShowFollowings" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/followingsIcn.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgBlock" fitHeight="50.0" fitWidth="50.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#pageBlock" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/icnBan.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgFollow" fitHeight="50.0" fitWidth="50.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#pageFollow" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/icnFollow.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgViews" fitHeight="50.0" fitWidth="50.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#pageView" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icnViews.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgNewPost" fitHeight="50.0" fitWidth="50.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#newPost" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/icnNewMessage.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                     </children>
+                  </Pane>
+               </top>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
