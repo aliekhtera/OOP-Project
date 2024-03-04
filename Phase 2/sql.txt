@@ -1,0 +1,35 @@
+CREATE TABLE `tbl_message` (
+  `idtbl_message` int unsigned NOT NULL AUTO_INCREMENT,
+  `text` longtext NOT NULL,
+  `sender` varchar(45) NOT NULL,
+  `senttime` varchar(45) NOT NULL,
+  `sentdate` varchar(45) NOT NULL,
+  `repliedto` int NOT NULL DEFAULT '-1',
+  `isedited` tinyint DEFAULT '0',
+  `isforwarded` tinyint DEFAULT '0',
+  `likes` longtext,
+  `views` longtext,
+  `file` longblob,
+  `fileformat` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`idtbl_message`),
+  UNIQUE KEY `idtbl_message_UNIQUE` (`idtbl_message`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+CREATE TABLE `tbl_message` (
+  `idtbl_message` int unsigned NOT NULL AUTO_INCREMENT,
+  `text` longtext NOT NULL,
+  `sender` varchar(45) NOT NULL,
+  `senttime` varchar(45) NOT NULL,
+  `sentdate` varchar(45) NOT NULL,
+  `repliedto` int NOT NULL DEFAULT '-1',
+  `isedited` tinyint DEFAULT '0',
+  `isforwarded` tinyint DEFAULT '0',
+  `likes` longtext,
+  `views` longtext,
+  `file` longblob,
+  `fileformat` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`idtbl_message`),
+  UNIQUE KEY `idtbl_message_UNIQUE` (`idtbl_message`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

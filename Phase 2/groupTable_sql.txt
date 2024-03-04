@@ -1,0 +1,11 @@
+CREATE TABLE `tbl_group` (
+  `idtbl_group` int NOT NULL AUTO_INCREMENT,
+  `users` longtext NOT NULL,
+  `admin` varchar(45) NOT NULL,
+  `messages` longtext,
+  `groupName` longtext NOT NULL,
+  `groupID` longtext NOT NULL,
+  `bannedAccounts` longtext,
+  `profile` longblob,
+  PRIMARY KEY (`idtbl_group`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
